@@ -22,9 +22,11 @@ ActiveRecord::Schema.define(version: 20150712205827) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.text    "comment"
-    t.integer "product_id"
-    t.integer "user_id"
+    t.text     "comment"
+    t.integer  "product_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
